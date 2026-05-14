@@ -122,13 +122,7 @@ function initGoatCounterEvents() {
     });
   });
 
-  /* Language switcher */
-  document.querySelectorAll('.nav-lang a').forEach((el) => {
-    el.addEventListener('click', () => {
-      const lang = el.href.includes('/en/') || el.textContent.trim() === 'En' ? 'en' : 'ru';
-      gc('lang-switch-to-' + lang, 'Language: ' + lang.toUpperCase());
-    });
-  });
+  /* Language switcher — removed (English only) */
 
   /* Contact links on about page */
   document.querySelectorAll('.about-links a').forEach((el) => {
@@ -327,7 +321,6 @@ function initBurger() {
 
 function initTerminal() {
   let el = null;
-  const isRu = !location.pathname.includes('/en/');
   const history = [];
   let historyIdx = -1;
 
@@ -352,22 +345,18 @@ function initTerminal() {
   const commandNames = ['help', 'projects', 'contact', 'skills', 'about', 'fortune', 'sudo', 'clear', 'exit'];
 
   const commands = {
-    help: () => isRu
-      ? 'projects\ncontact\nskills\nabout\nfortune          \u0446\u0438\u0442\u0430\u0442\u0430 \u043e \u0434\u0438\u0437\u0430\u0439\u043d\u0435\nsudo\nclear\nexit'
-      : 'projects\ncontact\nskills\nabout\nfortune          design quote\nsudo\nclear\nexit',
+    help: () => 'projects\ncontact\nskills\nabout\nfortune          design quote\nsudo\nclear\nexit',
     projects: () => 'Project Alpha \u00b7 Project Beta \u00b7 Project Gamma',
     contact: () => 'email: hello@example.com\ntelegram: @janesmith',
     skills: () =>
       'Design:  Product, Brand, UI/UX\nCode:    HTML, CSS, JavaScript',
-    about: () => isRu
-      ? 'Jane Smith \u2014 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432\u044b\u0439 \u0434\u0438\u0437\u0430\u0439\u043d\u0435\u0440.'
-      : 'Jane Smith \u2014 product designer.',
+    about: () => 'Jane Smith \u2014 product designer.',
     fortune: () => {
       if (!commands._fortunePool || !commands._fortunePool.length)
         commands._fortunePool = fortunes.slice().sort(() => Math.random() - 0.5);
       return commands._fortunePool.pop();
     },
-    sudo: () => isRu ? '\u0423 \u0432\u0430\u0441 \u043d\u0435\u0442 \u043f\u0440\u0430\u0432. \u041d\u043e \u0435\u0441\u0442\u044c \u0432\u043a\u0443\u0441.' : 'Permission denied. But you have great taste.',
+    sudo: () => 'Permission denied. But you have great taste.',
     clear: () => '__CLEAR__',
     exit: () => '__EXIT__',
   };
@@ -406,7 +395,7 @@ function initTerminal() {
 
     const input = el.querySelector('#term-input');
     const output = el.querySelector('#term-output');
-    const welcome = isRu ? '\u041f\u0440\u0438\u0432\u0435\u0442. \u0412\u0432\u0435\u0434\u0438 help \u0434\u043b\u044f \u0441\u043f\u0438\u0441\u043a\u0430 \u043a\u043e\u043c\u0430\u043d\u0434.' : 'Hi. Type help for available commands.';
+    const welcome = 'Hi. Type help for available commands.';
     output.innerHTML = '<span class="out">' + welcome + '</span>\n';
     input.focus();
 
@@ -458,7 +447,7 @@ function initTerminal() {
         if (result === '__EXIT__') { destroy(); return; }
         output.innerHTML += '<span class="out">' + result + '</span>\n';
       } else {
-        const msg = isRu ? '\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043a\u043e\u043c\u0430\u043d\u0434\u0430. \u0412\u0432\u0435\u0434\u0438 help.' : 'Unknown command. Type help.';
+        const msg = 'Unknown command. Type help.';
         output.innerHTML += '<span class="out">' + msg + '</span>\n';
       }
       el.querySelector('#term-body').scrollTop = 9999;
@@ -472,7 +461,7 @@ function initTerminal() {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.code === 'Backquote' || e.key === '`' || e.key === '\u0451' || e.key === '\u0401') {
+    if (e.code === 'Backquote' || e.key === '`') {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       e.preventDefault();
       if (el) destroy(); else create();
@@ -494,7 +483,7 @@ function initEmailCopy() {
     const email = emailLink.href.replace('mailto:', '');
     navigator.clipboard.writeText(email).then(() => {
       const tip = document.createElement('span');
-      tip.textContent = document.documentElement.lang === 'en' ? 'Copied!' : '\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e!';
+      tip.textContent = 'Copied!';
       tip.style.cssText =
         'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);' +
         'background:#222;color:#fff;padding:8px 20px;border-radius:8px;font-family:var(--font-sans);' +
