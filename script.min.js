@@ -90,6 +90,30 @@ function initSlideshows() {
 
 /* --- External links inside project cards (stop bubbling to parent <a>) --- */
 
+function initProjectSorting() {
+  document.querySelectorAll('.project-list').forEach((list) => {
+    const items = Array.from(list.querySelectorAll('.project-item[data-start-date]'));
+    if (items.length < 2) return;
+
+    items
+      .map((item, index) => ({ item, index, timestamp: getProjectStartTimestamp(item.dataset.startDate) }))
+      .sort((a, b) => b.timestamp - a.timestamp || a.index - b.index)
+      .forEach(({ item }) => {
+        const year = item.dataset.startDate?.slice(0, 4);
+        const yearEl = item.querySelector('.project-year');
+        if (yearEl && year) yearEl.textContent = year;
+        list.appendChild(item);
+      });
+  });
+}
+
+function getProjectStartTimestamp(startDate) {
+  if (!startDate) return Number.NEGATIVE_INFINITY;
+  const normalizedDate = /^\d{4}$/.test(startDate) ? `${startDate}-01-01` : startDate;
+  const timestamp = Date.parse(`${normalizedDate}T00:00:00`);
+  return Number.isNaN(timestamp) ? Number.NEGATIVE_INFINITY : timestamp;
+}
+
 function initProjectLinks() {
   document.querySelectorAll('.project-name-link[data-href]').forEach((link) => {
     function openLink(e) {
@@ -346,11 +370,11 @@ function initTerminal() {
 
   const commands = {
     help: () => 'projects\ncontact\nskills\nabout\nfortune          design quote\nsudo\nclear\nexit',
-    projects: () => 'Project Alpha \u00b7 Project Beta \u00b7 Project Gamma',
-    contact: () => 'email: hello@example.com\ntelegram: @janesmith',
+    projects: () => 'PrintGuard \u00b7 Smooth Cruize \u00b7 Gone-Phishin \u00b7 Osiris \u00b7 PictureMe \u00b7 Blackjack',
+    contact: () => 'email: hello@example.com\ngithub: @tylererv',
     skills: () =>
       'Design:  Product, Brand, UI/UX\nCode:    HTML, CSS, JavaScript',
-    about: () => 'Jane Smith \u2014 product designer.',
+    about: () => 'Tyler Ervin \u2014 software developer.',
     fortune: () => {
       if (!commands._fortunePool || !commands._fortunePool.length)
         commands._fortunePool = fortunes.slice().sort(() => Math.random() - 0.5);
@@ -824,6 +848,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavActive();
   initThemeToggle();
   initNavScrollLine();
+  initProjectSorting();
   initScrollReveal();
   initCaseTabs();
   initSlideshows();

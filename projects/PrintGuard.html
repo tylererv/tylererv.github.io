@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrintGuard — Tyler Ervin</title>
+  <meta name="description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, and printer control.">
+  <meta property="og:title" content="PrintGuard — Tyler Ervin">
+  <meta property="og:description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, and printer control.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/project-default.svg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tylererv.github.io/projects/PrintGuard.html">
+  <link rel="canonical" href="https://tylererv.github.io/projects/PrintGuard.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.min.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <div class="nav-left"><div class="nav-links"><a href="../">Projects</a><a href="../about.html">About</a></div></div>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+  </div></nav>
+  <div class="nav-mobile" aria-hidden="true"></div>
+
+  <main class="main main--case">
+    <div class="case-meta">Backend Developer + Database Engineer / Designer · 2026</div>
+    <h1 class="case-h1">PrintGuard</h1>
+    <p class="case-description">PrintGuard is an AI-powered process monitoring platform for detecting 3D printing failures in real time across multiple cameras and printers.</p>
+
+    <div class="case-body">
+      <section class="case-section">
+        <span class="case-section-num">1</span>
+        <h2 class="case-section-title">Project Description</h2>
+        <p>The platform monitors live webcam feeds, runs computer vision detection against each print, and surfaces a print health score for every active camera. When the model identifies a failure such as spaghetti, warping, stringing, or detachment, the system can notify users and send direct G-code commands to the affected printer over USB serial.</p>
+        <p>PrintGuard combines a Next.js frontend, FastAPI backend, Supabase database/auth layer, and YOLOv8 model pipeline to support individual makers, teams, labs, and print farms.</p>
+      </section>
+
+      <picture>
+        <img class="case-img-full" loading="lazy" src="../assets/img/project-default.svg" alt="PrintGuard project placeholder">
+      </picture>
+
+      <section class="case-section">
+        <span class="case-section-num">2</span>
+        <h2 class="case-section-title">Tech Stack</h2>
+        <ul>
+          <li>Frontend: Next.js and TypeScript</li>
+          <li>Backend: FastAPI, OpenCV, and pyserial</li>
+          <li>Database and authentication: Supabase PostgreSQL with Row Level Security</li>
+          <li>Computer vision: YOLOv8 with Ultralytics and PyTorch</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">3</span>
+        <h2 class="case-section-title">Personal Contribution</h2>
+        <p>I created the video stream logic using threading, set up the Supabase database and schema, and developed the original PrintGuard concept. The idea earned second place at Innovation Venture 2026.</p>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">4</span>
+        <h2 class="case-section-title">Links</h2>
+        <p><a href="https://github.com/tylererv/PrintGuard" target="_blank" rel="noopener">GitHub repository</a></p>
+      </section>
+
+      <hr class="case-separator">
+      <div class="case-nav"><a href="../" class="case-nav-link case-nav-prev"><span class="case-nav-dir">&larr;</span> All projects</a></div>
+    </div>
+  </main>
+  <script src="../script.min.js"></script>
+</body>
+</html>
