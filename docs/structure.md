@@ -15,7 +15,8 @@ tylererv.github.io/
 ├── docs/                   # Project documentation (you are here)
 │   ├── structure.md        # This file
 │   ├── adding-projects.md  # How to add new case studies
-│   └── getting-started.md  # How to start building / customizing
+│   ├── getting-started.md  # How to start building / customizing
+│   └── scope.md            # Portfolio scope and project tracking
 │
 ├── .github/
 │   └── ISSUE_TEMPLATE/     # GitHub issue templates (bug, feature request)
@@ -38,4 +39,5 @@ tylererv.github.io/
 - **HTML files load the `.min` files** — `styles.min.css` and `script.min.js`. Always rebuild after editing source files (see `getting-started.md`).
 - **All images live in `assets/img/`** — use WebP with a PNG fallback via `<picture>`.
 - **Projects go in `projects/`** — each case study is a standalone `.html` file.
+- **Project scope lives in `docs/scope.md`** — update it when adding or changing portfolio project goals.
 - **`docs/` is never served as a page** — it's purely for developer reference.

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge-Generated Pothole Detection — Tyler Ervin</title>
+  <meta name="description" content="Research poster and abstract on real-time dashcam pothole localization, YOLOv8 detection, event generation, and Gemini Flash severity analysis.">
+  <meta property="og:title" content="Edge-Generated Pothole Detection — Tyler Ervin">
+  <meta property="og:description" content="Real-time dashcam pothole localization and severity analysis for road maintenance and safety.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/research/edge-potholes-poster.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tylererv.github.io/research/edge.html">
+  <link rel="canonical" href="https://tylererv.github.io/research/edge.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.min.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <div class="nav-left"><div class="nav-links"><a href="../">Projects</a><a href="../about.html">About</a></div></div>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+  </div></nav>
+  <div class="nav-mobile" aria-hidden="true"></div>
+
+  <main class="main main--case">
+    <div class="case-meta">Research · Delaware State University · 2026</div>
+    <h1 class="case-h1">Edge-Generated Pothole Detection</h1>
+    <p class="case-description">A real-time road maintenance research workflow that turns dashcam footage into localized pothole events, review clips, and AI-assisted severity assessments.</p>
+
+    <div class="case-body">
+      <section class="case-section">
+        <span class="case-section-num">1</span>
+        <h2 class="case-section-title">Research Focus</h2>
+        <p>This research explores how edge-friendly computer vision can identify potholes from vehicle dashcam footage and convert raw frame detections into practical maintenance reports. The workflow uses YOLOv8 for pothole detection, OpenCV for preprocessing and clip generation, Gemini Flash for severity analysis, and Supabase for structured event storage.</p>
+        <p>The goal is to make pothole detection more useful to transportation teams by producing organized, location-aware outputs instead of large volumes of raw frame-by-frame predictions.</p>
+      </section>
+
+      <div class="case-links">
+        <a href="../assets/research/edge-potholes-abstract.pdf" target="_blank" rel="noopener">Abstract PDF</a>
+        <a href="../assets/research/edge-potholes-poster.png" target="_blank" rel="noopener">Poster</a>
+      </div>
+
+      <picture>
+        <img class="case-img-full" loading="lazy" src="../assets/research/edge-potholes-poster.png" alt="Research poster for edge-generated localization and identification of road potholes">
+      </picture>
+      <div class="case-caption">Poster: edge-generated localization and identification of road potholes via real-time vehicle dashcam footage.</div>
+
+      <section class="case-section">
+        <span class="case-section-num">2</span>
+        <h2 class="case-section-title">Pipeline</h2>
+        <ul>
+          <li>Collect and preprocess dashcam video with OpenCV.</li>
+          <li>Run YOLOv8 object detection to identify potholes in roadway footage.</li>
+          <li>Post-process detections into event-level pothole reports and short evidence clips.</li>
+          <li>Use Gemini Flash to analyze pothole severity from generated clips.</li>
+          <li>Store structured results in Supabase for dashboard review and future GIS integration.</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">3</span>
+        <h2 class="case-section-title">Research Value</h2>
+        <p>The workflow shifts pothole detection from isolated model outputs toward actionable maintenance evidence. By combining preprocessing, detection, event creation, and severity review, the system can help reduce noisy repeated outputs and give reviewers cleaner material for prioritizing road repairs.</p>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">4</span>
+        <h2 class="case-section-title">Authors</h2>
+        <p>Mustafa Akilli, Evans Armantrading III, Tyler Ervin, Christian King, and Dr. Fatima Boukari, Ph.D.</p>
+      </section>
+
+      <hr class="case-separator">
+      <div class="case-nav"><a href="../" class="case-nav-link case-nav-prev"><span class="case-nav-dir">&larr;</span> All projects</a></div>
+    </div>
+  </main>
+  <script src="../script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gone-Phishin — Tyler Ervin</title>
+  <meta name="description" content="Google Chrome extension that scans Gmail messages with AI to help identify phishing emails.">
+  <meta property="og:title" content="Gone-Phishin — Tyler Ervin">
+  <meta property="og:description" content="Google Chrome extension that scans Gmail messages with AI to help identify phishing emails.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/gone-phishin.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tylererv.github.io/projects/Gone-Phishin%27.html">
+  <link rel="canonical" href="https://tylererv.github.io/projects/Gone-Phishin%27.html">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.min.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <div class="nav-left"><div class="nav-links"><a href="../">Projects</a><a href="../about.html">About</a></div></div>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+  </div></nav>
+  <div class="nav-mobile" aria-hidden="true"></div>
+
+  <main class="main main--case">
+    <div class="case-meta">Chrome Extension Developer · 2025</div>
+    <h1 class="case-h1">Gone-Phishin</h1>
+    <p class="case-description">Gone-Phishin is a Chrome extension that adds a Gmail scanning workflow for checking whether an email appears to be phishing.</p>
+
+    <div class="case-body">
+      <section class="case-section">
+        <span class="case-section-num">1</span>
+        <h2 class="case-section-title">Project Description</h2>
+        <p>The extension adds a "Scan this Email" action inside Gmail and sends the selected email content to a local Flask service. The backend uses the Google Gemini API to classify suspicious email content and help users identify phishing attempts before interacting with unsafe messages.</p>
+        <p>The repository also documents setup steps for installing dependencies, configuring the Gemini API key, running the local detector service, and loading the extension into Chrome developer mode.</p>
+      </section>
+
+      <picture>
+        <img class="case-img-full" loading="lazy" src="../assets/img/gone-phishin.png" alt="Gone-Phishin logo">
+      </picture>
+
+      <section class="case-section">
+        <span class="case-section-num">2</span>
+        <h2 class="case-section-title">Tech Stack</h2>
+        <ul>
+          <li>Chrome extension frontend with JavaScript</li>
+          <li>Python phishing detector service</li>
+          <li>Flask local server</li>
+          <li>Google Gemini API for AI-assisted email analysis</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">3</span>
+        <h2 class="case-section-title">Personal Contribution</h2>
+        <p>I created the project logic flow and integrated the Google Gemini API workflow that scans emails and detects scam or phishing content.</p>
+      </section>
+
+      <section class="case-section">
+        <span class="case-section-num">4</span>
+        <h2 class="case-section-title">Links</h2>
+        <p><a href="https://github.com/tylererv/Gone-Phishin" target="_blank" rel="noopener">GitHub repository</a></p>
+      </section>
+
+      <hr class="case-separator">
+      <div class="case-nav"><a href="../" class="case-nav-link case-nav-prev"><span class="case-nav-dir">&larr;</span> All projects</a></div>
+    </div>
+  </main>
+  <script src="../script.min.js"></script>
+</body>
+</html>
