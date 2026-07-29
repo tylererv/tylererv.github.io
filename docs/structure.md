@@ -21,7 +21,6 @@ tylererv.github.io/
 ├── manifest.json               # Web app metadata
 ├── sitemap.xml                 # Search engine sitemap
 ├── robots.txt                  # Crawl rules
-├── CNAME                       # GitHub Pages custom domain
 └── favicon.svg                 # SVG favicon fallback
 ```
 

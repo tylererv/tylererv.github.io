@@ -27,3 +27,5 @@ The HTML pages load `styles.min.css` and `script.min.js`. The source files are `
 ## Deployment
 
 GitHub Pages serves the repository from the root of the main branch. No framework build step is required.
+
+The default live URL is `https://tylererv.github.io/`. Add a `CNAME` file only if a real custom domain is configured in GitHub Pages settings.
