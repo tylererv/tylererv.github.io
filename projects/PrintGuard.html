@@ -3,72 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrintGuard — Tyler Ervin</title>
-  <meta name="description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, and printer control.">
-  <meta property="og:title" content="PrintGuard — Tyler Ervin">
-  <meta property="og:description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, and printer control.">
-  <meta property="og:image" content="https://tylererv.github.io/assets/img/project-default.svg">
+  <title>PrintGuard | Tyler Ervin</title>
+  <meta name="description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, Supabase, and printer control.">
+  <meta property="og:title" content="PrintGuard | Tyler Ervin">
+  <meta property="og:description" content="AI-powered 3D printing defect detector with live monitoring and printer control.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/printguard.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/PrintGuard.html">
   <link rel="canonical" href="https://tylererv.github.io/projects/PrintGuard.html">
-  <meta property="og:locale" content="en_US">
   <link rel="icon" type="image/png" href="../assets/img/babyler.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.min.css">
 </head>
 <body>
-  <nav class="nav"><div class="nav-inner">
-    <div class="nav-left"><div class="nav-links"><a href="../">Projects</a><a href="../about.html">About</a></div></div>
-    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
-  </div></nav>
-  <div class="nav-mobile" aria-hidden="true"></div>
+  <a class="skipLink" href="#mainContent">Skip to content</a>
+  <header class="siteHeader">
+    <nav class="navShell" aria-label="Primary navigation">
+      <a class="brandMark" href="../index.html"><span class="brandGlyph">TE</span><span class="brandName">Tyler Ervin</span></a>
+      <button class="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span></button>
+      <div class="navLinks" data-nav-links>
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../work-experience.html">Work Experience</a>
+      </div>
+    </nav>
+  </header>
 
-  <main class="main main--case">
-    <div class="case-meta">Backend Developer + Database Engineer / Designer · 2026</div>
-    <h1 class="case-h1">PrintGuard</h1>
-    <p class="case-description">PrintGuard is an AI-powered process monitoring platform for detecting 3D printing failures in real time across multiple cameras and printers.</p>
+  <main id="mainContent" class="pageShell">
+    <section class="caseHero">
+      <div class="reveal">
+        <p class="caseMeta">Backend Developer + Database Engineer / Designer | 2026</p>
+        <h1 class="caseTitle">PrintGuard</h1>
+        <p class="caseLead">An AI-powered process monitoring platform for detecting 3D printing failures in real time across multiple cameras and printers.</p>
+        <div class="caseLinks"><a href="https://github.com/tylererv/PrintGuard" target="_blank" rel="noopener">GitHub Repository</a></div>
+      </div>
+      <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03">
+        <img src="../assets/img/printguard.png" alt="PrintGuard preview">
+      </div>
+    </section>
 
-    <div class="case-body">
-      <section class="case-section">
-        <span class="case-section-num">1</span>
-        <h2 class="case-section-title">Project Description</h2>
-        <p>The platform monitors live webcam feeds, runs computer vision detection against each print, and surfaces a print health score for every active camera. When the model identifies a failure such as spaghetti, warping, stringing, or detachment, the system can notify users and send direct G-code commands to the affected printer over USB serial.</p>
-        <p>PrintGuard combines a Next.js frontend, FastAPI backend, Supabase database/auth layer, and YOLOv8 model pipeline to support individual makers, teams, labs, and print farms.</p>
+    <div class="caseBody">
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">01</span>
+        <div>
+          <h2>Project Description</h2>
+          <p>The platform monitors live webcam feeds, runs computer vision detection against each print, and surfaces a print health score for every active camera. When the model identifies a failure such as spaghetti, warping, stringing, or detachment, the system can notify users and send direct G-code commands to the affected printer over USB serial.</p>
+          <p>PrintGuard combines a Next.js frontend, FastAPI backend, Supabase database and authentication layer, and YOLOv8 model pipeline to support individual makers, teams, labs, and print farms.</p>
+        </div>
       </section>
 
-      <picture>
-        <img class="case-img-full" loading="lazy" src="../assets/img/project-default.svg" alt="PrintGuard project placeholder">
-      </picture>
+      <div class="caseImageFull reveal"><img src="../assets/img/prGu.png" alt="PrintGuard interface preview"></div>
 
-      <section class="case-section">
-        <span class="case-section-num">2</span>
-        <h2 class="case-section-title">Tech Stack</h2>
-        <ul>
-          <li>Frontend: Next.js and TypeScript</li>
-          <li>Backend: FastAPI, OpenCV, and pyserial</li>
-          <li>Database and authentication: Supabase PostgreSQL with Row Level Security</li>
-          <li>Computer vision: YOLOv8 with Ultralytics and PyTorch</li>
-        </ul>
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Tech Stack</h2>
+          <ul>
+            <li>Frontend: Next.js and TypeScript.</li>
+            <li>Backend: FastAPI, OpenCV, and pyserial.</li>
+            <li>Database and authentication: Supabase PostgreSQL with Row Level Security.</li>
+            <li>Computer vision: YOLOv8 with Ultralytics and PyTorch.</li>
+          </ul>
+        </div>
       </section>
 
-      <section class="case-section">
-        <span class="case-section-num">3</span>
-        <h2 class="case-section-title">Personal Contribution</h2>
-        <p>I created the video stream logic using threading, set up the Supabase database and schema, and developed the original PrintGuard concept. The idea earned second place at Innovation Venture 2026.</p>
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">03</span>
+        <div>
+          <h2>Personal Contribution</h2>
+          <p>I created the video stream logic using threading, set up the Supabase database and schema, and developed the original PrintGuard concept. The idea earned second place at Innovation Venture 2026.</p>
+        </div>
       </section>
-
-      <section class="case-section">
-        <span class="case-section-num">4</span>
-        <h2 class="case-section-title">Links</h2>
-        <p><a href="https://github.com/tylererv/PrintGuard" target="_blank" rel="noopener">GitHub repository</a></p>
-      </section>
-
-      <hr class="case-separator">
-      <div class="case-nav"><a href="../" class="case-nav-link case-nav-prev"><span class="case-nav-dir">&larr;</span> All projects</a></div>
     </div>
   </main>
+
+  <footer class="siteFooter">
+    <div class="footerShell"><span>PrintGuard</span><div class="footerLinks"><a href="../projects.html">All Projects</a><a href="../index.html">About</a></div></div>
+  </footer>
   <script src="../script.min.js"></script>
 </body>
 </html>

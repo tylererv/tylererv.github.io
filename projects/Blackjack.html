@@ -3,49 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blackjack — Tyler Ervin</title>
+  <title>Blackjack | Tyler Ervin</title>
   <meta name="description" content="Playable Blackjack game project by Tyler Ervin.">
-  <meta property="og:title" content="Blackjack — Tyler Ervin">
-  <meta property="og:description" content="Playable Blackjack game project by Tyler Ervin.">
-  <meta property="og:image" content="https://tylererv.github.io/assets/img/project-default.svg">
+  <meta property="og:title" content="Blackjack | Tyler Ervin">
+  <meta property="og:description" content="Playable Blackjack game project.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/witch.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/Blackjack.html">
   <link rel="canonical" href="https://tylererv.github.io/projects/Blackjack.html">
-  <meta property="og:locale" content="en_US">
   <link rel="icon" type="image/png" href="../assets/img/babyler.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.min.css">
 </head>
 <body>
-  <nav class="nav"><div class="nav-inner">
-    <div class="nav-left"><div class="nav-links"><a href="../">Projects</a><a href="../about.html">About</a></div></div>
-    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
-  </div></nav>
-  <div class="nav-mobile" aria-hidden="true"></div>
+  <a class="skipLink" href="#mainContent">Skip to content</a>
+  <header class="siteHeader">
+    <nav class="navShell" aria-label="Primary navigation">
+      <a class="brandMark" href="../index.html"><span class="brandGlyph">TE</span><span class="brandName">Tyler Ervin</span></a>
+      <button class="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span></button>
+      <div class="navLinks" data-nav-links>
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../work-experience.html">Work Experience</a>
+      </div>
+    </nav>
+  </header>
 
-  <main class="main main--case">
-    <div class="case-meta">Game Developer · 2025</div>
-    <h1 class="case-h1">Blackjack</h1>
-    <p class="case-description">Blackjack is listed as a playable card game project. Public GitHub metadata was not available under the matching project name.</p>
+  <main id="mainContent" class="pageShell">
+    <section class="caseHero">
+      <div class="reveal">
+        <p class="caseMeta">Game Developer | 2024</p>
+        <h1 class="caseTitle">Blackjack</h1>
+        <p class="caseLead">A playable card game project covering game logic, interface design, project ideation, and backlog management.</p>
+        <div class="caseLinks"><a href="https://github.com/CXKing23/Elements-II-Group-3-Blackjack-Project" target="_blank" rel="noopener">GitHub Repository</a></div>
+      </div>
+      <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/witch.png" alt="Blackjack project image"></div>
+    </section>
 
-    <div class="case-body">
-      <section class="case-section">
-        <span class="case-section-num">1</span>
-        <h2 class="case-section-title">Project Description</h2>
-        <p>This page is prepared for the final Blackjack summary, gameplay screenshots, rules implementation details, and repository link once the matching source is confirmed.</p>
+    <div class="caseBody">
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">01</span>
+        <div>
+          <h2>Project Description</h2>
+          <p>Blackjack is listed as a playable card game project. The confirmed portfolio content emphasizes project ideation, backlog management, full-stack development contribution, game logic, and interface design.</p>
+        </div>
       </section>
-      <picture><img class="case-img-full" loading="lazy" src="../assets/img/project-default.svg" alt="Blackjack project placeholder"></picture>
-      <section class="case-section">
-        <span class="case-section-num">2</span>
-        <h2 class="case-section-title">Personal Contribution</h2>
-        <p>I contributed project ideation, managed the backlog, and worked as a full-stack developer on the application.</p>
+
+      <div class="caseImageFull reveal"><img src="../assets/img/witch.png" alt="Blackjack project visual"></div>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Personal Contribution</h2>
+          <p>I contributed project ideation, managed the backlog, and worked as a full-stack developer on the application.</p>
+        </div>
       </section>
-      <hr class="case-separator">
-      <div class="case-nav"><a href="../" class="case-nav-link case-nav-prev"><span class="case-nav-dir">&larr;</span> All projects</a></div>
     </div>
   </main>
+
+  <footer class="siteFooter">
+    <div class="footerShell"><span>Blackjack</span><div class="footerLinks"><a href="../projects.html">All Projects</a><a href="../index.html">About</a></div></div>
+  </footer>
   <script src="../script.min.js"></script>
 </body>
 </html>
