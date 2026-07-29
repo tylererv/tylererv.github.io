@@ -1,11 +1,11 @@
 {
-  "name": "Portfolio",
-  "short_name": "Portfolio",
-  "description": "Personal design portfolio",
+  "name": "Tyler Ervin Portfolio",
+  "short_name": "Tyler Ervin",
+  "description": "Software development portfolio for Tyler Ervin.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#F8401C",
+  "background_color": "#040706",
+  "theme_color": "#0f2d20",
   "icons": [
     {
       "src": "favicon.svg",

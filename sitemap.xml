@@ -5,28 +5,40 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tylererv.github.io/about.html</loc>
+    <loc>https://tylererv.github.io/projects.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tylererv.github.io/research.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tylererv.github.io/work-experience.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tylererv.github.io/about.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://tylererv.github.io/projects/PrintGuard.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tylererv.github.io/projects/Smooth-Cruize.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tylererv.github.io/projects/Gone-Phishin%27.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tylererv.github.io/projects/Osiris.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tylererv.github.io/projects/PictureMe.html</loc>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tylererv.github.io/projects/Blackjack.html</loc>
