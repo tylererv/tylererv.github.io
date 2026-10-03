@@ -20,6 +20,7 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 
 ## Active Project Pages
 
+- yt-dlp Command Builder: Chrome side-panel extension for generating YouTube and SoundCloud terminal commands with platform-specific templates, local settings, clip ranges, and clipboard output.
 - PrintGuard: AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, Supabase, and printer control.
 - Smooth Cruize: backend and database-focused application work with live video stream pothole detection.
 - Gone-Phishin: Chrome and Gmail phishing scanner using JavaScript, Python, Flask, and the Gemini API.
