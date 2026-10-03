@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smooth Cruize | Tyler Ervin</title>
-  <meta name="description" content="Backend and database-focused application project by Tyler Ervin.">
+  <meta name="description" content="Smooth Cruize turns live and uploaded roadway video into pothole events, evidence clips, and AI-assisted severity reports.">
   <meta property="og:title" content="Smooth Cruize | Tyler Ervin">
-  <meta property="og:description" content="Backend and database-focused application project.">
+  <meta property="og:description" content="First-place HenHacks pothole detection project with FastAPI, YOLO, Gemini, and Supabase.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/smooth-cruize.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/Smooth-Cruize.html">
@@ -27,6 +27,7 @@
         <a href="../index.html">About</a>
         <a href="../research.html">Research</a>
         <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../certifications.html">Certifications</a>
         <a href="../work-experience.html">Work Experience</a>
       </div>
     </nav>
@@ -37,7 +38,7 @@
       <div class="reveal">
         <p class="caseMeta">Backend Developer + Database Engineer | 2026</p>
         <h1 class="caseTitle">Smooth Cruize</h1>
-        <p class="caseLead">A backend and database-focused application project with live video stream pothole detection and database-backed event handling.</p>
+        <p class="caseLead">A first-place HenHacks project that turns live or uploaded roadway video into structured pothole events, evidence clips, and AI-assisted severity reports.</p>
         <div class="caseLinks"><a href="https://github.com/Collegiates/Smooth-Cruize" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/smooth-cruize.png" alt="Smooth Cruize preview"></div>
@@ -48,7 +49,8 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Project Description</h2>
-          <p>Smooth Cruize is listed as a backend and database project in the portfolio. The confirmed portfolio details emphasize the backend-to-database pipeline and live video stream pothole detection work.</p>
+          <p>Smooth Cruize runs YOLO detection against live cameras, webcams, IP streams, or uploaded video. When it detects a pothole, the pipeline extracts a short context clip, sends it to the FastAPI backend, stores the media in Supabase, and uses Gemini 2.5 Flash to assign a severity score and description.</p>
+          <p>The Next.js dashboard organizes those events for map review, administration, and work-order planning. The current implementation uses mock GPS coordinates, leaving real vehicle location capture as a clear next integration step.</p>
         </div>
       </section>
 
@@ -56,6 +58,19 @@
 
       <section class="caseSection reveal">
         <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Architecture</h2>
+          <ul>
+            <li>Detection: YOLO video processing for live and offline sources.</li>
+            <li>API: FastAPI endpoints for clip upload and event creation.</li>
+            <li>Analysis: Gemini 2.5 Flash for severity scoring and descriptions.</li>
+            <li>Data: Supabase Storage and PostgreSQL-backed pothole events.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">03</span>
         <div>
           <h2>Personal Contribution</h2>
           <p>I handled backend development, connected YOLO model detections to the backend-to-database pipeline, created live video stream pothole detection, built the Supabase database and schema, and contributed to general UI decisions.</p>

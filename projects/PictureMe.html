@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PictureMe | Tyler Ervin</title>
-  <meta name="description" content="Image-centered application project page for PictureMe by Tyler Ervin.">
+  <meta name="description" content="PictureMe is an event photo platform that uses face recognition to deliver each attendee's photos to a personal gallery.">
   <meta property="og:title" content="PictureMe | Tyler Ervin">
-  <meta property="og:description" content="Image-centered application project page for PictureMe.">
+  <meta property="og:description" content="Event photo delivery with face recognition, vector search, cloud storage, and SMS notifications.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/pictureme.svg">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/PictureMe.html">
@@ -27,6 +27,7 @@
         <a href="../index.html">About</a>
         <a href="../research.html">Research</a>
         <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../certifications.html">Certifications</a>
         <a href="../work-experience.html">Work Experience</a>
       </div>
     </nav>
@@ -35,10 +36,10 @@
   <main id="mainContent" class="pageShell">
     <section class="caseHero">
       <div class="reveal">
-        <p class="caseMeta">Software Developer | 2026</p>
+        <p class="caseMeta">Backend Developer | 2026</p>
         <h1 class="caseTitle">PictureMe</h1>
-        <p class="caseLead">An image-centered application project with project direction refinement and backend reliability improvements.</p>
-        <div class="caseLinks"><a href="https://github.com/3vqns/PersonalPM" target="_blank" rel="noopener">GitHub Repository</a></div>
+        <p class="caseLead">An event photo delivery platform that uses face recognition to match attendees with the photos in which they appear.</p>
+        <div class="caseLinks"><a href="https://github.com/3vqns/PersonalPM" target="_blank" rel="noopener">GitHub Repository</a><a href="https://personal-pm-frontend-one.vercel.app" target="_blank" rel="noopener">Live Application</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/pictureme.svg" alt="PictureMe preview"></div>
     </section>
@@ -48,7 +49,8 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Project Description</h2>
-          <p>PictureMe is listed as an image-centered application project. The current confirmed content focuses on project direction, backend fixes, and improving the application's reliability and behavior.</p>
+          <p>Attendees register their face once, join an event through a QR code, and receive a personal gallery as organizers and contributors upload photos. The platform also supports event roles, a full event gallery, history, and SMS notifications when matching photos are ready.</p>
+          <p>The backend coordinates AWS Rekognition for face matching, Cloudinary for media storage, Twilio for SMS delivery, and Supabase with pgvector for application data and similarity search.</p>
         </div>
       </section>
 
@@ -56,6 +58,19 @@
 
       <section class="caseSection reveal">
         <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Tech Stack</h2>
+          <ul>
+            <li>Frontend: React, TypeScript, and Vite.</li>
+            <li>Backend: Python and FastAPI.</li>
+            <li>Data: Supabase PostgreSQL with pgvector.</li>
+            <li>Integrations: AWS Rekognition, Cloudinary, and Twilio SMS.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">03</span>
         <div>
           <h2>Personal Contribution</h2>
           <p>I refined the project direction and made general backend fixes to improve the application's reliability and behavior.</p>

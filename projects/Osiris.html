@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osiris | Tyler Ervin</title>
-  <meta name="description" content="Software development project page for Osiris by Tyler Ervin.">
+  <meta name="description" content="Osiris is an adaptive coding-practice platform with a FastAPI REST API, Supabase, Next.js, and local AI-guided hints.">
   <meta property="og:title" content="Osiris | Tyler Ervin">
-  <meta property="og:description" content="Software development project page for Osiris.">
+  <meta property="og:description" content="Adaptive coding practice with personalized roadmaps and local AI-guided hints.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/osiris.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/Osiris.html">
@@ -27,6 +27,7 @@
         <a href="../index.html">About</a>
         <a href="../research.html">Research</a>
         <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../certifications.html">Certifications</a>
         <a href="../work-experience.html">Work Experience</a>
       </div>
     </nav>
@@ -35,9 +36,9 @@
   <main id="mainContent" class="pageShell">
     <section class="caseHero">
       <div class="reveal">
-        <p class="caseMeta">Software Developer | 2026</p>
+        <p class="caseMeta">Full-Stack Developer | 2026</p>
         <h1 class="caseTitle">Osiris</h1>
-        <p class="caseLead">A portfolio software project centered on product direction, full-stack development, and implementation research.</p>
+        <p class="caseLead">An adaptive coding-practice platform that identifies skill gaps, builds personalized learning roadmaps, and guides users without simply giving away solutions.</p>
         <div class="caseLinks"><a href="https://github.com/Collegiates/Osiris" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/osiris.png" alt="Osiris preview"></div>
@@ -48,7 +49,8 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Project Description</h2>
-          <p>Osiris is listed as a portfolio software project. The current confirmed content focuses on the project concept, full-stack development work, and research into the core product direction and implementation approach.</p>
+          <p>Osiris begins with an assessment, records performance and time data, and uses the results to recommend a sequence of coding problems. The application is designed around guided practice: its AI assistant gives Socratic hints that help a learner reason through a problem instead of returning a complete answer.</p>
+          <p>The architecture separates a Next.js interface, FastAPI REST API, Supabase authentication and PostgreSQL data, and a locally hosted Ollama model. Keeping inference local supports privacy while output validation helps the application keep the assistant within its intended coaching role.</p>
         </div>
       </section>
 
@@ -56,6 +58,19 @@
 
       <section class="caseSection reveal">
         <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Tech Stack</h2>
+          <ul>
+            <li>Frontend: Next.js and TypeScript.</li>
+            <li>Backend: FastAPI REST API.</li>
+            <li>Data and authentication: Supabase and PostgreSQL.</li>
+            <li>AI guidance: local Ollama inference with a gpt-oss model.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">03</span>
         <div>
           <h2>Personal Contribution</h2>
           <p>I created the project idea, handled full-stack development, and researched the core product direction and implementation approach.</p>

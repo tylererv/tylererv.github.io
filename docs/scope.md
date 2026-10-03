@@ -2,16 +2,18 @@
 
 ## End Goal
 
-Build and maintain Tyler Ervin's personal software development portfolio on GitHub Pages. The site should present Tyler as a software developer, explain his current stack and role focus, organize research and project work clearly, and keep each portfolio project on its own standalone HTML case page.
+Build and maintain Tyler Ervin's personal software development portfolio on GitHub Pages. The site should present Tyler as an aspiring backend developer with interests in AI/ML engineering and software engineering, explain his emphasis on architecture, planning, RESTful APIs, and databases, and organize projects, research, and certifications clearly.
 
 ## Core Moving Parts
 
 - `index.html` is the home page and about me page.
 - `projects.html` lists the portfolio projects and links to one standalone `.html` file per project in `projects/`.
 - `research.html` lists research work and links to detail pages in `research/`.
-- `work-experience.html` presents conservative experience and availability content until exact employers, titles, and dates are provided.
+- `certifications.html` records certifications and professional certificate programs with accurate completion status.
+- `work-experience.html` presents project-based experience, research collaboration, and role focus.
 - `projects/` contains one standalone case-study HTML page per project.
 - `research/edge.html` presents the edge-generated pothole detection research page.
+- `research/alphafold-neurodegenerative-disease.html` presents the AI-agent-guided AlphaFold protein interaction research page.
 - `assets/img/` stores local portfolio images, thumbnails, profile images, and Open Graph images.
 - `assets/research/` stores research posters and PDFs.
 - `styles.css` and `styles.min.css` define the shared dark green, grey, and black design system.
@@ -22,19 +24,25 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 
 - yt-dlp Command Builder: Chrome side-panel extension for generating YouTube and SoundCloud terminal commands with platform-specific templates, local settings, clip ranges, and clipboard output.
 - PrintGuard: AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, Supabase, and printer control.
-- Smooth Cruize: backend and database-focused application work with live video stream pothole detection.
+- Smooth Cruize: first-place HenHacks application that turns live or uploaded roadway video into structured pothole events and AI-assisted severity reports.
 - Gone-Phishin: Chrome and Gmail phishing scanner using JavaScript, Python, Flask, and the Gemini API.
-- Osiris: portfolio software project focused on product direction, full-stack development, and implementation research.
-- PictureMe: image-centered application project with direction refinement and backend reliability fixes.
-- Blackjack: playable card game project with game logic, interface design, ideation, backlog management, and full-stack contribution.
+- Osiris: adaptive coding-practice platform with a FastAPI REST API, Supabase, Next.js, and local AI-guided hints.
+- PictureMe: event photo delivery platform using face recognition, vector search, cloud storage, and SMS notifications.
+- Blackjack: Java and Greenfoot card game with a state-driven game loop, betting, dealer logic, and custom card behavior.
 
 ## Active Research Pages
 
 - Edge-Generated Pothole Detection: real-time dashcam pothole localization, event generation, review clips, and Gemini Flash severity analysis.
+- AI Agent + AlphaFold Protein Interaction Inference: research on under-studied proteins, structural confidence, and cross-protein interactions in major neurodegenerative diseases.
+
+## Active Certifications
+
+- AWS Certified AI Practitioner: in progress.
+- IBM Back-End Development Professional Certificate: in progress.
 
 ## Scope Guardrails
 
 - Keep the portfolio focused on software development projects, practical implementation details, and research work.
 - Do not invent project outcomes, employers, job titles, metrics, or personal contributions.
 - Prefer local images in `assets/img/` and `assets/research/` over hotlinked assets.
-- Keep the main navigation limited to About, Research, Projects, and Work Experience unless Tyler asks to expand it.
+- Keep the main navigation limited to About, Research, Projects, Certifications, and Work Experience unless Tyler asks to expand it.
