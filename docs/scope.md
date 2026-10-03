@@ -10,7 +10,7 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 - `projects.html` lists the portfolio projects and links to one standalone `.html` file per project in `projects/`.
 - `research.html` lists research work and links to detail pages in `research/`.
 - `certifications.html` records certifications and professional certificate programs with accurate completion status.
-- `work-experience.html` presents project-based experience, research collaboration, and role focus.
+- `work-experience.html` presents Tyler's documented professional employment history from his current resume.
 - `projects/` contains one standalone case-study HTML page per project.
 - `research/edge.html` presents the edge-generated pothole detection research page.
 - `research/alphafold-neurodegenerative-disease.html` presents the AI-agent-guided AlphaFold protein interaction research page.
