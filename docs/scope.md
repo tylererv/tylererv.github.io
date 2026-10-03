@@ -23,11 +23,11 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 ## Active Project Pages
 
 - yt-dlp Command Builder: Chrome side-panel extension for generating YouTube and SoundCloud terminal commands with platform-specific templates, local settings, clip ranges, and clipboard output.
-- PrintGuard: AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, Supabase, and printer control.
+- PrintGuard: multi-camera 3D-print monitoring prototype with FastAPI streaming, Supabase-backed stations, serial printer control, and a planned YOLOv8 inference layer.
 - Smooth Cruize: first-place HenHacks application that turns live or uploaded roadway video into structured pothole events and AI-assisted severity reports.
 - Gone-Phishin: Chrome and Gmail phishing scanner using JavaScript, Python, Flask, and the Gemini API.
-- Osiris: adaptive coding-practice platform with a FastAPI REST API, Supabase, Next.js, and local AI-guided hints.
-- PictureMe: event photo delivery platform using face recognition, vector search, cloud storage, and SMS notifications.
+- Osiris: active coding-practice prototype with a typed FastAPI REST surface, Supabase, Next.js, personalized roadmaps, and a local AI integration target.
+- PictureMe: event photo delivery platform using FastAPI, Supabase, Cloudinary, and AWS Rekognition to match attendees with their photos.
 - Blackjack: Java and Greenfoot card game with a state-driven game loop, betting, dealer logic, and custom card behavior.
 
 ## Active Research Pages
@@ -43,6 +43,6 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 ## Scope Guardrails
 
 - Keep the portfolio focused on software development projects, practical implementation details, and research work.
-- Do not invent project outcomes, employers, job titles, metrics, or personal contributions.
+- Do not invent project outcomes, employers, job titles, metrics, or ownership claims.
 - Prefer local images in `assets/img/` and `assets/research/` over hotlinked assets.
 - Keep the main navigation limited to About, Research, Projects, Certifications, and Work Experience unless Tyler asks to expand it.

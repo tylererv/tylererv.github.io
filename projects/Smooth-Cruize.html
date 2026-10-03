@@ -39,6 +39,7 @@
         <p class="caseMeta">Backend Developer + Database Engineer | 2026</p>
         <h1 class="caseTitle">Smooth Cruize</h1>
         <p class="caseLead">A first-place HenHacks project that turns live or uploaded roadway video into structured pothole events, evidence clips, and AI-assisted severity reports.</p>
+        <div class="awardCallout"><span class="awardIcon" aria-hidden="true">🥇</span><strong>1st Place Winner at HenHacks 2026</strong><a href="https://www.henhackshackathon.com/lookback-2026" target="_blank" rel="noopener">HenHacks 2026 Lookback ↗</a></div>
         <div class="caseLinks"><a href="https://github.com/Collegiates/Smooth-Cruize" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/smooth-cruize.png" alt="Smooth Cruize preview"></div>
@@ -72,10 +73,18 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I handled backend development, connected YOLO model detections to the backend-to-database pipeline, created live video stream pothole detection, built the Supabase database and schema, and contributed to general UI decisions.</p>
+          <h2>Detection-to-Work-Order Flow</h2>
+          <p>The computer vision layer supports two operating modes: a live runner for webcams and RTSP/HTTP sources, and an offline batch processor for recorded footage. The live process keeps a rolling frame buffer so a detection produces evidence from before and after the triggering frame instead of an isolated image.</p>
+          <ul>
+            <li>Generated MP4 clips are posted as multipart uploads to <code>/api/upload-clip</code> with vehicle and coordinate metadata.</li>
+            <li>The backend assigns a unique filename, writes the clip to the <code>pothole-clips</code> Supabase Storage bucket, and passes a temporary copy to Gemini 2.5 Flash.</li>
+            <li>Gemini returns structured JSON with a 1–10 severity score and a concise description; the service then links <code>pothole_events</code> and <code>clips</code> records.</li>
+            <li>The Next.js administration interface supports severity sorting, status changes, map context, video evidence, and full work-order records.</li>
+          </ul>
+          <p>GPS values are currently mocked by the backend. The documented next stage is to ingest coordinates from a real vehicle or transit GPS source and suppress duplicate detections within a geographic threshold.</p>
         </div>
       </section>
+
     </div>
   </main>
 

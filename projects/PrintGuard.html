@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PrintGuard | Tyler Ervin</title>
-  <meta name="description" content="AI-powered 3D printing defect detector with live monitoring, YOLOv8 detection, Supabase, and printer control.">
+  <meta name="description" content="Multi-camera 3D-print monitoring prototype with FastAPI streaming, Supabase-backed stations, serial printer control, and a planned YOLOv8 inference layer.">
   <meta property="og:title" content="PrintGuard | Tyler Ervin">
-  <meta property="og:description" content="AI-powered 3D printing defect detector with live monitoring and printer control.">
+  <meta property="og:description" content="Multi-camera 3D-print monitoring architecture with live streaming and direct printer control.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/prGu.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/PrintGuard.html">
@@ -38,7 +38,8 @@
       <div class="reveal">
         <p class="caseMeta">Backend Developer + Database Engineer / Designer | 2026</p>
         <h1 class="caseTitle">PrintGuard</h1>
-        <p class="caseLead">An AI-powered process monitoring platform for detecting 3D printing failures in real time across multiple cameras and printers.</p>
+        <p class="caseLead">A multi-camera 3D-print monitoring platform with backend foundations for AI defect detection and direct printer control.</p>
+        <div class="awardCallout"><span class="awardIcon" aria-hidden="true">🥈</span><strong>2nd Place Winner at Innovation Venture 2026</strong></div>
         <div class="caseLinks"><a href="https://github.com/tylererv/PrintGuard" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03">
@@ -51,9 +52,9 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Project Description</h2>
-          <p>The platform monitors live webcam feeds, runs computer vision detection against each print, and surfaces a print health score for every active camera. When the model identifies a failure such as spaghetti, warping, stringing, or detachment, the system can notify users and send direct G-code commands to the affected printer over USB serial.</p>
-          <p>PrintGuard combines a Next.js frontend, FastAPI backend, Supabase database and authentication layer, and YOLOv8 model pipeline to support individual makers, teams, labs, and print farms.</p>
-          <p>The backend treats cameras, print jobs, organizations, and printer commands as separate responsibilities. This keeps live computer vision work from blocking the API and gives authenticated teams a shared place to monitor equipment.</p>
+          <p>PrintGuard is designed to watch live camera feeds for failures such as spaghetti, warping, stringing, and detachment, notify operators, and send G-code commands to an affected printer over USB serial.</p>
+          <p>The current prototype combines a Next.js frontend, FastAPI backend, Supabase database and authentication layer, multi-source OpenCV streaming, station management, and pyserial printer controls. Its analysis and guard endpoints expose the intended YOLOv8 boundary, while live model inference and detection-triggered incident handling remain in progress.</p>
+          <p>The backend treats cameras, stations, organizations, notifications, and printer commands as separate responsibilities. This prepares the system to add inference workers without coupling model execution to the request lifecycle.</p>
         </div>
       </section>
 
@@ -67,7 +68,7 @@
             <li>Frontend: Next.js and TypeScript.</li>
             <li>Backend: FastAPI, OpenCV, and pyserial.</li>
             <li>Database and authentication: Supabase PostgreSQL with Row Level Security.</li>
-            <li>Computer vision: YOLOv8 with Ultralytics and PyTorch.</li>
+            <li>Computer vision target: YOLOv8 with Ultralytics and PyTorch.</li>
           </ul>
         </div>
       </section>
@@ -75,10 +76,18 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I created the video stream logic using threading, set up the Supabase database and schema, and developed the original PrintGuard concept. The idea earned second place at Innovation Venture 2026.</p>
+          <h2>Backend Architecture</h2>
+          <p>The FastAPI service normalizes local webcams, RTSP streams, and HTTP MJPEG feeds into stable source keys. A camera manager owns capture-worker lifecycles, while a station layer binds each printer to one or more camera sources, a default view, and an optional serial port.</p>
+          <ul>
+            <li>Video endpoints expose source discovery, network-source registration, JPEG snapshots, MJPEG streams, saved preferences, and batch frame analysis.</li>
+            <li>Station APIs validate multi-camera assignments and provide printer-scoped stream, snapshot, pause, and stop operations.</li>
+            <li>Supabase JWT validation and organization-membership checks protect camera and station resources when authentication is configured.</li>
+            <li>pyserial endpoints discover connected ports and send G-code directly to a configured printer, including pause and emergency-stop commands.</li>
+            <li>Notification startup is camera-gated and uses deduplication controls before sending account-linked email alerts.</li>
+          </ul>
         </div>
       </section>
+
     </div>
   </main>
 

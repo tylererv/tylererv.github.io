@@ -7,7 +7,7 @@
   <meta name="description" content="Chrome side-panel extension that builds customizable yt-dlp terminal commands for YouTube and SoundCloud.">
   <meta property="og:title" content="yt-dlp Command Builder | Tyler Ervin">
   <meta property="og:description" content="Browser tooling with platform-specific command templates, saved settings, clip ranges, and clipboard output.">
-  <meta property="og:image" content="https://tylererv.github.io/assets/img/og-image.png">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/ytdlp-command-builder.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/Yt-dlp-Command-Builder.html">
   <link rel="canonical" href="https://tylererv.github.io/projects/Yt-dlp-Command-Builder.html">
@@ -41,7 +41,7 @@
         <p class="caseLead">A Chrome side-panel extension that turns the current YouTube or SoundCloud URL into a customizable terminal command.</p>
         <div class="caseLinks"><a href="https://github.com/tylererv/Tylers-yt-dlp-chrome" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
-      <div class="caseMedia reveal" aria-hidden="true"><img src="../assets/img/project-default.svg" alt=""></div>
+      <div class="caseMedia reveal"><img src="../assets/img/ytdlp-command-builder.png" alt="yt-dlp Command Builder logo"></div>
     </section>
 
     <div class="caseBody">
@@ -76,6 +76,15 @@
             <li>Substitutes URL, path, clip-range, and playlist placeholders, appending enabled options when their placeholders are absent.</li>
             <li>Disables command copying on unsupported pages and provides feedback when clipboard copying fails.</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">04</span>
+        <div>
+          <h2>Architecture and Command Safety</h2>
+          <p>A Manifest V3 service worker configures the side panel to open from the extension action, while the panel itself owns URL detection, settings, and command rendering. Hostname checks use the browser's URL parser so only YouTube, youtu.be, and SoundCloud domains enable command copying.</p>
+          <p>The generator quotes active URLs before inserting them into shell templates, cleans empty continuation lines, and appends enabled range or playlist flags when an older custom template does not contain the related placeholder. The extension never executes shell commands or downloads media inside Chrome; users review and run the generated command in their own terminal.</p>
         </div>
       </section>
     </div>

@@ -317,6 +317,34 @@ p {
   max-width: 100%;
 }
 
+.awardCallout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 22px;
+  padding: 12px 16px;
+  border: 1px solid rgba(113, 208, 139, 0.36);
+  border-radius: 8px;
+  color: var(--textMain);
+  background: rgba(47, 125, 79, 0.13);
+}
+
+.awardIcon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.awardCallout a {
+  color: var(--greenBright);
+  font-family: var(--fontMono);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .buttonLink,
 .textLink,
 .caseLinks a {
@@ -602,6 +630,49 @@ p {
   margin-top: 10px;
 }
 
+.credentialContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: clamp(24px, 4vw, 54px);
+  align-items: start;
+}
+
+.credentialImage {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  overflow: hidden;
+  border: 1px solid var(--greyLine);
+  border-radius: 8px;
+  background: #070b0a;
+}
+
+.credentialImage img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.credentialVisual {
+  margin: 0;
+}
+
+.credentialVisual figcaption {
+  margin-top: 8px;
+  color: var(--textMuted);
+  font-family: var(--fontMono);
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.caseSection code {
+  color: var(--greenBright);
+  font-family: var(--fontMono);
+  font-size: 0.9em;
+}
+
 .tagList {
   display: flex;
   flex-wrap: wrap;
@@ -827,6 +898,14 @@ p {
   .caseSection,
   .timelineItem {
     grid-template-columns: 1fr;
+  }
+
+  .credentialContent {
+    grid-template-columns: 1fr;
+  }
+
+  .credentialImage {
+    max-width: 240px;
   }
 
   .hero {

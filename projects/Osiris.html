@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osiris | Tyler Ervin</title>
-  <meta name="description" content="Osiris is an adaptive coding-practice platform with a FastAPI REST API, Supabase, Next.js, and local AI-guided hints.">
+  <meta name="description" content="Osiris is an active coding-practice prototype with typed FastAPI contracts, Supabase, Next.js, personalized roadmaps, and a local AI integration target.">
   <meta property="og:title" content="Osiris | Tyler Ervin">
-  <meta property="og:description" content="Adaptive coding practice with personalized roadmaps and local AI-guided hints.">
+  <meta property="og:description" content="Coding-practice prototype with personalized roadmaps and a local AI-guidance architecture.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/osiris.png">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/Osiris.html">
@@ -38,7 +38,7 @@
       <div class="reveal">
         <p class="caseMeta">Full-Stack Developer | 2026</p>
         <h1 class="caseTitle">Osiris</h1>
-        <p class="caseLead">An adaptive coding-practice platform that identifies skill gaps, builds personalized learning roadmaps, and guides users without simply giving away solutions.</p>
+        <p class="caseLead">An active coding-practice prototype that maps assessment performance into personalized learning roadmaps and a local AI-guidance workflow.</p>
         <div class="caseLinks"><a href="https://github.com/Collegiates/Osiris" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/osiris.png" alt="Osiris preview"></div>
@@ -50,7 +50,7 @@
         <div>
           <h2>Project Description</h2>
           <p>Osiris begins with an assessment, records performance and time data, and uses the results to recommend a sequence of coding problems. The application is designed around guided practice: its AI assistant gives Socratic hints that help a learner reason through a problem instead of returning a complete answer.</p>
-          <p>The architecture separates a Next.js interface, FastAPI REST API, Supabase authentication and PostgreSQL data, and a locally hosted Ollama model. Keeping inference local supports privacy while output validation helps the application keep the assistant within its intended coaching role.</p>
+          <p>The repository defines a Next.js interface, a typed FastAPI REST surface, Supabase as the authentication and PostgreSQL boundary, and a local Ollama integration target. Assessment, roadmap, problem, progress, and AI-guidance routes are separated by responsibility; several database, JWT-verification, and model calls remain explicit prototype stubs in the current backend.</p>
         </div>
       </section>
 
@@ -64,7 +64,7 @@
             <li>Frontend: Next.js and TypeScript.</li>
             <li>Backend: FastAPI REST API.</li>
             <li>Data and authentication: Supabase and PostgreSQL.</li>
-            <li>AI guidance: local Ollama inference with a gpt-oss model.</li>
+            <li>AI guidance target: local Ollama inference with a gpt-oss model.</li>
           </ul>
         </div>
       </section>
@@ -72,10 +72,18 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I created the project idea, handled full-stack development, and researched the core product direction and implementation approach.</p>
+          <h2>Assessment and Practice Architecture</h2>
+          <ul>
+            <li>Pydantic request and response models define contracts for starting and submitting assessments, loading roadmaps, retrieving problems, recording attempts, and summarizing progress.</li>
+            <li>The problem API is structured around hidden test cases and attempt feedback. The resume documents Docker-isolated testing environments for safer code execution.</li>
+            <li>The Next.js application uses Supabase session handling and protected routes as the user-facing authentication foundation.</li>
+            <li>The roadmap model combines assessment topics, difficulty, performance, and completion state so recommendations can change as the learner improves.</li>
+            <li>Ollama with a local gpt-oss model was selected to keep inference private and constrain guidance to questions, conceptual explanations, and incremental hints.</li>
+          </ul>
+          <p>The current repository is an active prototype. Its route contracts and architecture decisions are present, while production persistence, verified Supabase JWT handling, full sandbox orchestration, and live Ollama calls remain areas of ongoing implementation.</p>
         </div>
       </section>
+
     </div>
   </main>
 
