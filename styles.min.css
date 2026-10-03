@@ -587,6 +587,21 @@ p {
   line-height: 1.65;
 }
 
+.timelineItem ul {
+  max-width: 760px;
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.timelineItem li {
+  color: var(--textMuted);
+  line-height: 1.65;
+}
+
+.timelineItem li + li {
+  margin-top: 10px;
+}
+
 .tagList {
   display: flex;
   flex-wrap: wrap;
