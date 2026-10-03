@@ -98,3 +98,29 @@ Portfolio Change Report containing:
 
 The report must reflect work actually performed.
 Never fabricate PASS results.
+
+## Pull Request Requirements
+
+Every portfolio modification PR must include a Portfolio Change
+Report in the pull request description.
+
+The report must contain:
+
+- project name
+- date
+- high-level changes
+- low-level changes
+- exact files changed
+- build result
+- lint result
+- test result
+- desktop inspection result
+- mobile inspection result
+- links checked
+- errors and warnings
+- skipped validation steps and reasons
+
+Never report a validation step as PASS unless it was actually
+performed successfully during the current task.
+
+Do not merge the pull request.
