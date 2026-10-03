@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yt-dlp Command Builder | Tyler Ervin</title>
+  <meta name="description" content="Chrome side-panel extension that builds customizable yt-dlp terminal commands for YouTube and SoundCloud.">
+  <meta property="og:title" content="yt-dlp Command Builder | Tyler Ervin">
+  <meta property="og:description" content="Browser tooling with platform-specific command templates, saved settings, clip ranges, and clipboard output.">
+  <meta property="og:image" content="https://tylererv.github.io/assets/img/og-image.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tylererv.github.io/projects/Yt-dlp-Command-Builder.html">
+  <link rel="canonical" href="https://tylererv.github.io/projects/Yt-dlp-Command-Builder.html">
+  <link rel="icon" type="image/png" href="../assets/img/babyler.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.min.css">
+</head>
+<body>
+  <a class="skipLink" href="#mainContent">Skip to content</a>
+  <header class="siteHeader">
+    <nav class="navShell" aria-label="Primary navigation">
+      <a class="brandMark" href="../index.html"><span class="brandGlyph">TE</span><span class="brandName">Tyler Ervin</span></a>
+      <button class="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span></button>
+      <div class="navLinks" data-nav-links>
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../work-experience.html">Work Experience</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent" class="pageShell">
+    <section class="caseHero">
+      <div class="reveal">
+        <p class="caseMeta">Browser Tools | 2026</p>
+        <h1 class="caseTitle"><span>yt-dlp</span><span>Command</span><span>Builder</span></h1>
+        <p class="caseLead">A Chrome side-panel extension that turns the current YouTube or SoundCloud URL into a customizable terminal command.</p>
+        <div class="caseLinks"><a href="https://github.com/tylererv/Tylers-yt-dlp-chrome" target="_blank" rel="noopener">GitHub Repository</a></div>
+      </div>
+      <div class="caseMedia reveal" aria-hidden="true"><img src="../assets/img/project-default.svg" alt=""></div>
+    </section>
+
+    <div class="caseBody">
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">01</span>
+        <div>
+          <h2>Project Description</h2>
+          <p>The extension opens beside the active tab and builds yt-dlp commands for YouTube and SoundCloud. Users can edit separate templates for each platform, choose a YouTube output path, set a clip range, and control whether YouTube playlists are included.</p>
+          <p>Templates and preferences are saved locally in Chrome extension storage. The generated command can be copied to the clipboard and run in a terminal with separately installed yt-dlp and FFmpeg tools.</p>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">02</span>
+        <div>
+          <h2>Tech Stack</h2>
+          <ul>
+            <li>Interface: HTML, CSS, and JavaScript.</li>
+            <li>Extension platform: Chrome Manifest V3 with a background service worker.</li>
+            <li>Browser integration: Side Panel, Tabs, local Storage, and Clipboard APIs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="caseSection reveal">
+        <span class="caseSectionNumber">03</span>
+        <div>
+          <h2>Implementation Highlights</h2>
+          <ul>
+            <li>Tracks active-tab and URL changes so the side panel updates as the user navigates.</li>
+            <li>Detects supported platforms and switches between separately saved YouTube and SoundCloud templates.</li>
+            <li>Substitutes URL, path, clip-range, and playlist placeholders, appending enabled options when their placeholders are absent.</li>
+            <li>Disables command copying on unsupported pages and provides feedback when clipboard copying fails.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerShell"><span>yt-dlp Command Builder</span><div class="footerLinks"><a href="../projects.html">All Projects</a><a href="../index.html">About</a></div></div>
+  </footer>
+  <script src="../script.min.js"></script>
+</body>
+</html>
