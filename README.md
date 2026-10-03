@@ -1,15 +1,16 @@
 # Tyler Ervin Portfolio
 
-This repository is Tyler Ervin's static software development portfolio for GitHub Pages. The site has been rebuilt from scratch with a dark green, grey, and black visual system, lightweight scroll animation, and standalone HTML case pages for each project.
+This repository is Tyler Ervin's static backend development and applied AI portfolio for GitHub Pages. It uses a dark green, grey, and black visual system, lightweight scroll animation, and standalone HTML case pages for each project and research effort.
 
 ## Main Pages
 
 - `index.html` - home page and about me page.
 - `projects.html` - project index.
 - `research.html` - research index.
+- `certifications.html` - active certifications and professional learning.
 - `work-experience.html` - work experience and role focus.
 - `projects/*.html` - one standalone case page per project.
-- `research/edge.html` - research detail page.
+- `research/*.html` - standalone research detail pages.
 
 ## Development
 

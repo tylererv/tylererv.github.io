@@ -633,6 +633,10 @@ p {
   object-fit: cover;
 }
 
+.diagramMedia img {
+  object-fit: contain;
+}
+
 .caseBody {
   display: grid;
   gap: clamp(42px, 7vw, 78px);

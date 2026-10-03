@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title description">
+  <title id="title">AI agent and AlphaFold research pipeline</title>
+  <desc id="description">A diagram connecting research curation, AlphaFold2 Multimer, structural confidence metrics, and protein interaction hypotheses.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07130f"/>
+      <stop offset="1" stop-color="#0b2016"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f7d4f"/>
+      <stop offset="1" stop-color="#71d08b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#71d08b">
+    <path d="M0 125h1200M0 250h1200M0 375h1200M0 500h1200M0 625h1200"/>
+    <path d="M200 0v750M400 0v750M600 0v750M800 0v750M1000 0v750"/>
+  </g>
+  <text x="72" y="88" fill="#edf3ef" font-family="Inter,Arial,sans-serif" font-size="36" font-weight="700">AI AGENT + ALPHAFOLD</text>
+  <text x="72" y="126" fill="#a9b5ad" font-family="DM Mono,monospace" font-size="18">PROTEIN INTERACTION INFERENCE PIPELINE</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <g transform="translate(72 230)">
+      <rect width="240" height="184" rx="18" fill="#111b17" stroke="#2f7d4f" stroke-width="3"/>
+      <circle cx="42" cy="45" r="18" fill="#71d08b"/>
+      <text x="76" y="53" fill="#edf3ef" font-size="23" font-weight="700">Research agent</text>
+      <text x="28" y="105" fill="#a9b5ad" font-size="19">Identify and curate</text>
+      <text x="28" y="136" fill="#a9b5ad" font-size="19">under-studied proteins</text>
+    </g>
+    <path d="M330 322h92" stroke="url(#accent)" stroke-width="7"/>
+    <path d="m414 307 24 15-24 15" fill="none" stroke="#71d08b" stroke-width="7"/>
+    <g transform="translate(456 230)">
+      <rect width="288" height="184" rx="18" fill="#111b17" stroke="#2f7d4f" stroke-width="3"/>
+      <path d="M37 69c27-45 52 30 80-9s47 35 78-6 41 21 58-6" fill="none" stroke="#71d08b" stroke-width="8" stroke-linecap="round"/>
+      <text x="28" y="119" fill="#edf3ef" font-size="23" font-weight="700">AlphaFold2 Multimer</text>
+      <text x="28" y="151" fill="#a9b5ad" font-size="19">3D complexes + interfaces</text>
+    </g>
+    <path d="M762 322h92" stroke="url(#accent)" stroke-width="7"/>
+    <path d="m846 307 24 15-24 15" fill="none" stroke="#71d08b" stroke-width="7"/>
+    <g transform="translate(888 230)">
+      <rect width="240" height="184" rx="18" fill="#111b17" stroke="#2f7d4f" stroke-width="3"/>
+      <text x="28" y="60" fill="#edf3ef" font-size="23" font-weight="700">Evaluate</text>
+      <text x="28" y="103" fill="#71d08b" font-family="DM Mono,monospace" font-size="22">pLDDT</text>
+      <text x="128" y="103" fill="#71d08b" font-family="DM Mono,monospace" font-size="22">PAE</text>
+      <text x="28" y="141" fill="#a9b5ad" font-size="19">Confidence, disorder,</text>
+      <text x="28" y="168" fill="#a9b5ad" font-size="19">interaction feasibility</text>
+    </g>
+    <rect x="72" y="510" width="1056" height="128" rx="18" fill="#0d1814" stroke="#33443b" stroke-width="2"/>
+    <text x="108" y="558" fill="#71d08b" font-family="DM Mono,monospace" font-size="17">RESEARCH OUTPUT</text>
+    <text x="108" y="603" fill="#edf3ef" font-size="26" font-weight="600">Testable hypotheses for misfolding, oligomerization, and cross-protein interactions</text>
+  </g>
+</svg>

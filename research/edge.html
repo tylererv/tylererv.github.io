@@ -27,6 +27,7 @@
         <a href="../index.html">About</a>
         <a class="isActive" href="../research.html">Research</a>
         <a href="../projects.html">Projects</a>
+        <a href="../certifications.html">Certifications</a>
         <a href="../work-experience.html">Work Experience</a>
       </div>
     </nav>
@@ -51,8 +52,8 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Research Focus</h2>
-          <p>This research explores how edge-friendly computer vision can identify potholes from vehicle dashcam footage and convert raw frame detections into practical maintenance reports. The workflow uses YOLOv8 for pothole detection, OpenCV for preprocessing and clip generation, Gemini Flash for severity analysis, and Supabase for structured event storage.</p>
-          <p>The goal is to make pothole detection more useful to transportation teams by producing organized, location-aware outputs instead of large volumes of raw frame-by-frame predictions.</p>
+          <p>This research explores how computer vision can identify potholes from vehicle dashcam footage and convert raw frame detections into practical maintenance reports. The workflow supports live cameras and uploaded video, uses YOLOv8 for detection and clip generation, calls Gemini 2.5 Flash for severity analysis, and stores structured events in Supabase.</p>
+          <p>The goal is to produce reviewable, event-level evidence instead of large volumes of repeated frame detections. The current application uses mock GPS coordinates, so real vehicle location capture remains part of the next stage of the work.</p>
         </div>
       </section>
 
@@ -64,11 +65,11 @@
         <div>
           <h2>Pipeline</h2>
           <ul>
-            <li>Collect and preprocess dashcam video with OpenCV.</li>
-            <li>Run YOLOv8 object detection to identify potholes in roadway footage.</li>
-            <li>Post-process detections into event-level pothole reports and short evidence clips.</li>
-            <li>Use Gemini Flash to analyze pothole severity from generated clips.</li>
-            <li>Store structured results in Supabase for dashboard review and future GIS integration.</li>
+            <li>Ingest a live camera, webcam, IP stream, or uploaded video.</li>
+            <li>Run YOLOv8 detection and collect a 3.5-second context clip around each event.</li>
+            <li>Send the clip through the FastAPI upload endpoint and store it in Supabase Storage.</li>
+            <li>Use Gemini 2.5 Flash to produce a severity score from 1–10 and a description.</li>
+            <li>Record the event for map review, administration, and work-order planning.</li>
           </ul>
         </div>
       </section>

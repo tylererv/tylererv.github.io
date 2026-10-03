@@ -5,6 +5,7 @@ tylererv.github.io/
 ├── index.html                  # Home page and about me page
 ├── projects.html               # Project index
 ├── research.html               # Research index
+├── certifications.html         # Certifications and professional learning
 ├── work-experience.html        # Work experience and availability page
 ├── about.html                  # Redirect-style fallback to the home/about page
 ├── 404.html                    # GitHub Pages 404 page

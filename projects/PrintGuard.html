@@ -27,6 +27,7 @@
         <a href="../index.html">About</a>
         <a href="../research.html">Research</a>
         <a class="isActive" href="../projects.html">Projects</a>
+        <a href="../certifications.html">Certifications</a>
         <a href="../work-experience.html">Work Experience</a>
       </div>
     </nav>
@@ -52,6 +53,7 @@
           <h2>Project Description</h2>
           <p>The platform monitors live webcam feeds, runs computer vision detection against each print, and surfaces a print health score for every active camera. When the model identifies a failure such as spaghetti, warping, stringing, or detachment, the system can notify users and send direct G-code commands to the affected printer over USB serial.</p>
           <p>PrintGuard combines a Next.js frontend, FastAPI backend, Supabase database and authentication layer, and YOLOv8 model pipeline to support individual makers, teams, labs, and print farms.</p>
+          <p>The backend treats cameras, print jobs, organizations, and printer commands as separate responsibilities. This keeps live computer vision work from blocking the API and gives authenticated teams a shared place to monitor equipment.</p>
         </div>
       </section>
 
