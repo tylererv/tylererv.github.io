@@ -13,7 +13,7 @@ Each project must have its own standalone `.html` file inside `projects/`.
 
 ## Content Rules
 
-- Do not invent metrics, repository details, employer names, or personal contributions.
+- Do not invent metrics, repository details, employer names, or ownership claims.
 - Use project descriptions and images that are already confirmed or explicitly provided.
-- Keep case pages focused on project description, tech stack when confirmed, and personal contribution.
+- Keep case pages focused on the project description, confirmed technology stack, architecture, and implementation details.
 - Keep filenames stable once linked from `projects.html` and `sitemap.xml`.

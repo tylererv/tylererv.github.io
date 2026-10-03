@@ -6,7 +6,7 @@
   <title>PictureMe | Tyler Ervin</title>
   <meta name="description" content="PictureMe is an event photo platform that uses face recognition to deliver each attendee's photos to a personal gallery.">
   <meta property="og:title" content="PictureMe | Tyler Ervin">
-  <meta property="og:description" content="Event photo delivery with face recognition, vector search, cloud storage, and SMS notifications.">
+  <meta property="og:description" content="Event photo delivery using AWS Rekognition, Cloudinary, and Supabase.">
   <meta property="og:image" content="https://tylererv.github.io/assets/img/pictureme.svg">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://tylererv.github.io/projects/PictureMe.html">
@@ -39,6 +39,7 @@
         <p class="caseMeta">Backend Developer | 2026</p>
         <h1 class="caseTitle">PictureMe</h1>
         <p class="caseLead">An event photo delivery platform that uses face recognition to match attendees with the photos in which they appear.</p>
+        <div class="awardCallout"><span class="awardIcon" aria-hidden="true">🥇</span><strong>1st Place Winner at HornetHacks 2026</strong></div>
         <div class="caseLinks"><a href="https://github.com/3vqns/PersonalPM" target="_blank" rel="noopener">GitHub Repository</a><a href="https://personal-pm-frontend-one.vercel.app" target="_blank" rel="noopener">Live Application</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/pictureme.svg" alt="PictureMe preview"></div>
@@ -49,8 +50,8 @@
         <span class="caseSectionNumber">01</span>
         <div>
           <h2>Project Description</h2>
-          <p>Attendees register their face once, join an event through a QR code, and receive a personal gallery as organizers and contributors upload photos. The platform also supports event roles, a full event gallery, history, and SMS notifications when matching photos are ready.</p>
-          <p>The backend coordinates AWS Rekognition for face matching, Cloudinary for media storage, Twilio for SMS delivery, and Supabase with pgvector for application data and similarity search.</p>
+          <p>Attendees register their face once, join an event through a QR code, and receive a personal gallery as organizers and contributors upload photos. The application also supports event roles, invitations, contributor access, a complete event gallery, and scoped gallery-sharing links.</p>
+          <p>The current backend coordinates AWS Rekognition collections for face indexing and matching, Cloudinary for media storage, and Supabase for authentication and application data. The project documentation identifies SMS delivery and pgvector similarity workflows as future expansion areas.</p>
         </div>
       </section>
 
@@ -63,8 +64,8 @@
           <ul>
             <li>Frontend: React, TypeScript, and Vite.</li>
             <li>Backend: Python and FastAPI.</li>
-            <li>Data: Supabase PostgreSQL with pgvector.</li>
-            <li>Integrations: AWS Rekognition, Cloudinary, and Twilio SMS.</li>
+            <li>Data and authentication: Supabase PostgreSQL.</li>
+            <li>Integrations: AWS Rekognition and Cloudinary.</li>
           </ul>
         </div>
       </section>
@@ -72,10 +73,18 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I refined the project direction and made general backend fixes to improve the application's reliability and behavior.</p>
+          <h2>Backend Pipeline and Access Model</h2>
+          <p>The FastAPI backend separates account enrollment, event management, photo ingestion, face matching, and gallery delivery into dedicated services. Supabase bearer tokens identify the current user, while privileged database and media operations remain server-side.</p>
+          <ul>
+            <li>Each event has creator, administrator, and member permissions for invitations, contributor access, photo management, and event settings.</li>
+            <li>The browser can request signed Cloudinary upload parameters, upload media directly, and submit the resulting references for asynchronous indexing.</li>
+            <li>AWS Rekognition collections isolate face indexes by event; matching results connect detected faces to registered profiles and personalized gallery records.</li>
+            <li>Separate endpoints return the complete event gallery and the authenticated user's matched photos, while scoped share tokens support controlled gallery links.</li>
+            <li>Supabase migrations define face profiles, events, upload jobs, matching data, gallery tokens, and database access policies; backend tests cover services, API contracts, authentication, matching, uploads, and cleanup behavior.</li>
+          </ul>
         </div>
       </section>
+
     </div>
   </main>
 

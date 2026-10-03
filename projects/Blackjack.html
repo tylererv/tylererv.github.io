@@ -72,10 +72,17 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I contributed project ideation, managed the backlog, and worked as a full-stack developer on the application.</p>
+          <h2>State and Rules Engine</h2>
+          <p>An enum-backed controller moves the Greenfoot world through betting, dealing, player action, dealer action, winner evaluation, reset, and game-over states. Each phase creates or removes its own actors, which keeps card controls, betting controls, and result screens synchronized with the active round.</p>
+          <p>The deck model builds a three-deck shoe, adds WITCH and Fortune Teller cards to each deck, and randomizes the shoe with Fisher–Yates shuffling. Hand evaluation tracks an Ace as either 1 or 11, distinguishes a two-card Blackjack from a normal 21, and excludes face-down cards until the dealer reveals them.</p>
+          <ul>
+            <li>The dealer draws through 16 and stands at 17, while dealer draws filter out player-only special cards.</li>
+            <li>WITCH lets the player remove a card from the hand; Fortune Teller reveals the dealer's hidden card.</li>
+            <li>Bronze, silver, gold, and all-in controls update the shared balance and bet, with separate payouts for wins, pushes, and Blackjack.</li>
+          </ul>
         </div>
       </section>
+
     </div>
   </main>
 

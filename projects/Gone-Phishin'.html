@@ -39,6 +39,7 @@
         <p class="caseMeta">Chrome Extension Developer | 2025</p>
         <h1 class="caseTitle">Gone-Phishin</h1>
         <p class="caseLead">A Chrome extension that adds a Gmail scanning workflow for checking whether an email appears to be phishing.</p>
+        <div class="awardCallout"><span class="awardIcon" aria-hidden="true">🥉</span><strong>3rd Place Winner at HornetHacks 2025</strong></div>
         <div class="caseLinks"><a href="https://github.com/tylererv/Gone-Phishin" target="_blank" rel="noopener">GitHub Repository</a></div>
       </div>
       <div class="caseMedia reveal parallaxSoft" data-parallax-speed="0.03"><img src="../assets/img/gone-phishin.png" alt="Gone-Phishin logo"></div>
@@ -72,10 +73,17 @@
       <section class="caseSection reveal">
         <span class="caseSectionNumber">03</span>
         <div>
-          <h2>Personal Contribution</h2>
-          <p>I created the project logic flow and integrated the Google Gemini API workflow that scans emails and detects scam or phishing content.</p>
+          <h2>Extension-to-API Workflow</h2>
+          <p>A Manifest V3 content script injects the scan action into Gmail, reads the open message and sender from the page, and sends a structured JSON request to a Flask service running on the user's machine. The service accepts either one email or a batch, then returns the message ID, sender, timestamp, normalized risk level, and a short set of warnings.</p>
+          <p>Gemini 2.0 Flash reviews the message's context, language, and sender signals. The backend converts the model response into <strong>risky</strong>, <strong>unsure</strong>, or <strong>none</strong>, which the extension presents as Scam, Unsure, or Legit in an in-page result dialog.</p>
+          <ul>
+            <li>Chrome storage, tab, scripting, and Gmail host permissions support the browser workflow.</li>
+            <li>Flask-CORS allows the extension to call the local detector endpoint during development.</li>
+            <li>The current prototype requires the Flask service and Gemini API key to be configured locally, and its Gmail DOM selectors may need maintenance as Gmail changes.</li>
+          </ul>
         </div>
       </section>
+
     </div>
   </main>
 
