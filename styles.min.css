@@ -511,7 +511,7 @@ p {
 
 .eventSlide {
   display: grid;
-  grid-template-rows: clamp(240px, 42vh, 380px) auto;
+  grid-template-rows: clamp(120px, 21vh, 190px) auto;
   flex: 0 0 100%;
   min-width: 0;
   color: inherit;
@@ -1213,7 +1213,7 @@ p {
   }
 
   .eventSlide {
-    grid-template-rows: clamp(230px, 40vh, 320px) auto;
+    grid-template-rows: clamp(115px, 20vh, 160px) auto;
   }
 
   .eventCardBody {
