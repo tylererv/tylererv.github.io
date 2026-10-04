@@ -493,7 +493,7 @@ p {
 
 .eventCard {
   display: grid;
-  grid-template-rows: 118px 1fr;
+  grid-template-rows: 160px 1fr;
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--greyLine);
@@ -510,6 +510,7 @@ p {
 }
 
 .eventImage {
+  position: relative;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -518,6 +519,9 @@ p {
 }
 
 .eventImage img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
