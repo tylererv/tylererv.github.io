@@ -376,6 +376,32 @@ p {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.buttonLink.certificationButton {
+  border-color: #fb923c;
+  color: #fff7ed;
+  background: #9a3412;
+}
+
+.buttonLink.certificationButton:hover,
+.buttonLink.certificationButton:focus-visible {
+  border-color: #fdba74;
+  color: #ffffff;
+  background: #7c2d12;
+}
+
+.buttonLink.linkedinButton {
+  border-color: #60a5fa;
+  color: #ffffff;
+  background: #0a66c2;
+}
+
+.buttonLink.linkedinButton:hover,
+.buttonLink.linkedinButton:focus-visible {
+  border-color: #93c5fd;
+  color: #ffffff;
+  background: #004182;
+}
+
 .heroPortrait {
   position: relative;
   isolation: isolate;
