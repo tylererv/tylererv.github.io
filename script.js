@@ -90,9 +90,91 @@ function initExternalCardLinks() {
   });
 }
 
+function initEventCarousels() {
+  document.querySelectorAll("[data-event-carousel]").forEach((carousel) => {
+    const viewport = carousel.querySelector("[data-carousel-viewport]");
+    const track = carousel.querySelector(".eventCarouselTrack");
+    const slides = Array.from(carousel.querySelectorAll(".eventSlide"));
+    const previousButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+    const status = carousel.querySelector("[data-carousel-status]");
+
+    if (!viewport || !track || !slides.length || !previousButton || !nextButton || !dotsContainer || !status) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let currentIndex = 0;
+    let scrollFrame = 0;
+
+    const dots = slides.map((slide, index) => {
+      const dot = document.createElement("button");
+      const title = slide.querySelector("h3")?.textContent || `Event ${index + 1}`;
+      dot.className = "eventCarouselDot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Show ${title}`);
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+      return dot;
+    });
+
+    function updateControls(index) {
+      currentIndex = index;
+      previousButton.disabled = index === 0;
+      nextButton.disabled = index === slides.length - 1;
+      status.textContent = `${index + 1} / ${slides.length}`;
+      slides.forEach((slide, slideIndex) => {
+        slide.tabIndex = slideIndex === index ? 0 : -1;
+      });
+      dots.forEach((dot, dotIndex) => {
+        dot.setAttribute("aria-current", String(dotIndex === index));
+      });
+    }
+
+    function goToSlide(index, behavior = reduceMotion.matches ? "auto" : "smooth") {
+      const nextIndex = Math.max(0, Math.min(index, slides.length - 1));
+      const left = slides[nextIndex].offsetLeft - track.offsetLeft;
+      viewport.scrollTo({ left, behavior });
+      updateControls(nextIndex);
+    }
+
+    function syncControlsToScroll() {
+      const closestIndex = slides.reduce((bestIndex, slide, index) => {
+        const bestDistance = Math.abs(slides[bestIndex].offsetLeft - track.offsetLeft - viewport.scrollLeft);
+        const slideDistance = Math.abs(slide.offsetLeft - track.offsetLeft - viewport.scrollLeft);
+        return slideDistance < bestDistance ? index : bestIndex;
+      }, 0);
+
+      updateControls(closestIndex);
+      scrollFrame = 0;
+    }
+
+    previousButton.addEventListener("click", () => goToSlide(currentIndex - 1));
+    nextButton.addEventListener("click", () => goToSlide(currentIndex + 1));
+
+    viewport.addEventListener(
+      "scroll",
+      () => {
+        if (scrollFrame) return;
+        scrollFrame = window.requestAnimationFrame(syncControlsToScroll);
+      },
+      { passive: true }
+    );
+
+    viewport.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      goToSlide(currentIndex + (event.key === "ArrowRight" ? 1 : -1));
+    });
+
+    window.addEventListener("resize", () => goToSlide(currentIndex, "auto"), { passive: true });
+    updateControls(0);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initScrollReveal();
   initParallax();
   initExternalCardLinks();
+  initEventCarousels();
 });
