@@ -160,6 +160,21 @@ function initEventCarousels() {
       { passive: true }
     );
 
+    viewport.addEventListener(
+      "wheel",
+      (event) => {
+        if (event.ctrlKey || event.shiftKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+
+        const page = document.scrollingElement;
+        if (!page) return;
+
+        const scrollUnit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
+        event.preventDefault();
+        page.scrollTop += event.deltaY * scrollUnit;
+      },
+      { passive: false }
+    );
+
     viewport.addEventListener("keydown", (event) => {
       if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
       event.preventDefault();
