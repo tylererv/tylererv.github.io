@@ -6,7 +6,7 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 
 ## Core Moving Parts
 
-- `index.html` is the home page and about me page.
+- `index.html` is the home and about page, with a compact Events Attended grid and selected featured work.
 - `projects.html` lists the portfolio projects and links to one standalone `.html` file per project in `projects/`.
 - `research.html` lists research work and links to detail pages in `research/`.
 - `certifications.html` records certifications and professional certificate programs with accurate completion status.
@@ -15,7 +15,7 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 - `research/edge.html` presents the edge-generated pothole detection research page.
 - `research/alphafold-neurodegenerative-disease.html` presents the AI-agent-guided AlphaFold protein interaction research page.
 - `assets/img/` stores local portfolio images, thumbnails, profile images, and Open Graph images.
-- `assets/research/` stores research posters and PDFs.
+- `assets/research/` stores research posters and PDFs, including the AlphaFold and Edge research posters used by their case studies.
 - `styles.css` and `styles.min.css` define the shared dark green, grey, and black design system.
 - `script.js` and `script.min.js` power the mobile navigation, scroll reveal, gentle parallax, and external card-link behavior.
 - `docs/` records project structure, development instructions, and this scope tracker.

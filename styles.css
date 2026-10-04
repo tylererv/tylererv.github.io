@@ -485,6 +485,70 @@ p {
   line-height: 1.55;
 }
 
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.eventCard {
+  display: grid;
+  grid-template-rows: 118px 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--greyLine);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(17, 25, 22, 0.96), rgba(7, 11, 10, 0.96));
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.eventCard:hover,
+.eventCard:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(113, 208, 139, 0.55);
+  background: linear-gradient(145deg, rgba(22, 36, 29, 0.98), rgba(8, 12, 11, 0.98));
+}
+
+.eventImage {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--greyLine);
+  background: #070b0a;
+}
+
+.eventImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.eventCardBody {
+  padding: 18px;
+}
+
+.eventMeta {
+  margin-bottom: 10px;
+  color: var(--greenBright);
+  font-family: var(--fontMono);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.eventCard h3 {
+  margin-bottom: 10px;
+  color: var(--textMain);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.eventCardBody > p:last-child {
+  margin-bottom: 0;
+  color: var(--textMuted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .projectList {
   display: grid;
   gap: 18px;
@@ -955,6 +1019,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .eventGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .projectCard {
     grid-template-columns: 132px minmax(0, 1fr);
   }
@@ -1032,6 +1100,24 @@ p {
   .skillGrid,
   .projectCard {
     grid-template-columns: 1fr;
+  }
+
+  .eventGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .eventCard {
+    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .eventImage {
+    border-right: 1px solid var(--greyLine);
+    border-bottom: 0;
+  }
+
+  .eventCardBody {
+    padding: 16px;
   }
 
   .projectImage {
