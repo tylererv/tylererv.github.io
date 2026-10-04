@@ -405,6 +405,9 @@ p {
 .heroPortrait {
   position: relative;
   isolation: isolate;
+  align-self: start;
+  justify-self: end;
+  width: min(100%, 320px);
 }
 
 .heroPortrait::before {
@@ -426,8 +429,9 @@ p {
 
 .portraitFrame img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: center;
   filter: saturate(0.85) contrast(1.08);
 }
 
@@ -480,6 +484,43 @@ p {
 
 .contentBlock strong {
   color: var(--textMain);
+}
+
+.earlyCuriosity {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  width: fit-content;
+  max-width: 100%;
+  margin: clamp(28px, 4vw, 44px) 0 0 auto;
+  padding: 12px 18px 12px 12px;
+  border: 1px solid var(--greyLine);
+  border-radius: 8px;
+  background: rgba(12, 18, 17, 0.82);
+}
+
+.earlyCuriosity img {
+  width: 96px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.earlyCuriosity figcaption {
+  max-width: 240px;
+  color: var(--textMuted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.earlyCuriosity figcaption span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--greenBright);
+  font-family: var(--fontMono);
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .skillGrid {
@@ -1152,7 +1193,8 @@ p {
   }
 
   .heroPortrait {
-    max-width: 440px;
+    justify-self: start;
+    width: min(100%, 360px);
   }
 
   .skillGrid {
@@ -1206,6 +1248,15 @@ p {
 
   .heroCopy {
     max-width: 320px;
+  }
+
+  .earlyCuriosity {
+    grid-template-columns: 84px minmax(0, 1fr);
+    margin-left: 0;
+  }
+
+  .earlyCuriosity img {
+    width: 84px;
   }
 
   .pageLead {
