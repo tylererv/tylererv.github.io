@@ -1,6 +1,6 @@
 # Tyler Ervin Portfolio
 
-This repository is Tyler Ervin's static backend development and applied AI portfolio for GitHub Pages. It uses a dark green, grey, and black visual system, lightweight scroll animation, and standalone HTML case pages for each project and research effort.
+This repository is Tyler Ervin's static cloud engineering portfolio for GitHub Pages, highlighting backend development, networking interests, AWS services, and applied AI. It uses a dark green, grey, and black visual system, lightweight scroll animation, and standalone HTML case pages for each project and research effort.
 
 ## Main Pages
 

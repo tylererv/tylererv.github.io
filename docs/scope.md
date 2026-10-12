@@ -2,14 +2,14 @@
 
 ## End Goal
 
-Build and maintain Tyler Ervin's personal software development portfolio on GitHub Pages. The site should present Tyler as an aspiring backend developer with interests in AI/ML engineering and software engineering, explain his emphasis on architecture, planning, RESTful APIs, and databases, and organize projects, research, and certifications clearly.
+Build and maintain Tyler Ervin's personal cloud engineering portfolio on GitHub Pages. The site should present Tyler as an aspiring cloud engineer with backend, networking, and AWS services knowledge, explain his emphasis on architecture, planning, secure access, RESTful APIs, and databases, and organize projects, work experience, research, and certifications clearly.
 
 ## Core Moving Parts
 
-- `index.html` is the home and about page, with a compact Events Attended grid and selected featured work.
+- `index.html` is the home and about page, with work experience, an Events Attended carousel, and selected featured work.
 - `projects.html` lists the portfolio projects and links to one standalone `.html` file per project in `projects/`.
 - `research.html` lists research work and links to detail pages in `research/`.
-- `certifications.html` records certifications and professional certificate programs with accurate completion status.
+- `certifications.html` records AWS certifications with accurate completion status.
 - `work-experience.html` presents Tyler's documented professional employment history from his current resume.
 - `projects/` contains one standalone case-study HTML page per project.
 - `research/edge.html` presents the edge-generated pothole detection research page.
@@ -38,11 +38,11 @@ Build and maintain Tyler Ervin's personal software development portfolio on GitH
 ## Active Certifications
 
 - AWS Certified AI Practitioner: in progress.
-- IBM Back-End Development Professional Certificate: in progress.
+- AWS Certified Developer – Associate: in progress.
 
 ## Scope Guardrails
 
-- Keep the portfolio focused on software development projects, practical implementation details, and research work.
+- Keep the portfolio focused on cloud engineering, software development projects, practical implementation details, and research work.
 - Do not invent project outcomes, employers, job titles, metrics, or ownership claims.
 - Prefer local images in `assets/img/` and `assets/research/` over hotlinked assets.
 - Keep the main navigation limited to About, Research, Projects, Certifications, and Work Experience unless Tyler asks to expand it.
