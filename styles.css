@@ -570,7 +570,7 @@ p {
 }
 
 .eventCarousel {
-  width: min(100%, 950px);
+  width: min(100%, 990px);
   margin-inline: auto;
 }
 
@@ -595,7 +595,7 @@ p {
 
 .eventSlide {
   display: grid;
-  grid-template-rows: clamp(250px, calc(21vh + 130px), 320px) auto;
+  grid-template-rows: clamp(290px, calc(21vh + 170px), 360px) auto;
   flex: 0 0 100%;
   min-width: 0;
   color: inherit;
@@ -1307,7 +1307,7 @@ p {
   }
 
   .eventSlide {
-    grid-template-rows: clamp(245px, calc(20vh + 130px), 290px) auto;
+    grid-template-rows: clamp(285px, calc(20vh + 170px), 330px) auto;
   }
 
   .eventCardBody {
